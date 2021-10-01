@@ -1,26 +1,29 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+//Made some slight changes to this script just so it's easier to implement an input class later.
+//Didn't change any logic. -Jack
+[RequireComponent(typeof(Rigidbody2D))]
 public class PlayerController : MonoBehaviour
 {
-    public Rigidbody2D rb;
-    public float movementSpeed = 10;
-    [Tooltip("Allow for full player movement from an analogue stick, currently smooths WASD too, will need to separate inputs if use of this is desired later")]
-    public bool useAnalogueMovement = false;
+    private Rigidbody2D rb;
+    
+    [SerializeField]
+    private float movementSpeed = 10;
+    
+    [Tooltip("Allow for full player movement from an analogue stick, will need to separate inputs if use of this is desired later")]
+    [SerializeField]
+    private bool useAnalogueMovement = false;
+    
+    
     //Deadzone still to be implemented, or possibly just relegated to Unity Input
-    float inputDeadzone = .1f;
+    private float inputDeadzone = .1f;
 
-    // Start is called before the first frame update
-    void Start()
+    private void Awake()
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        rb = GetComponent<Rigidbody2D>();
     }
 
     void FixedUpdate()
@@ -30,50 +33,52 @@ public class PlayerController : MonoBehaviour
 
     void MovePlayer()
     {
-        rb.velocity = (GetMoveVector() * movementSpeed);
+        rb.velocity = GetMoveVector() * (Time.deltaTime * movementSpeed);
     }
 
-    Vector2 GetMoveVector()
+    /// <summary>
+    /// Calls appropriate method for input type selected by user.
+    /// </summary>
+    private Vector2 GetMoveVector()
     {
-        if(useAnalogueMovement)
-        {
-            float horizontalMovement = Input.GetAxis("Horizontal");
-            float verticalMovement = Input.GetAxis("Vertical");
-
-            Vector2 moveVector = new Vector2(horizontalMovement, verticalMovement);
-            return moveVector;
-        }
-
+        if (useAnalogueMovement)
+            return AnalogueMoveVector();
         else
+            return RawMoveVector();
+    }
+
+    /// <summary>
+    /// Get a normalized vector2 based on horizontal and vertical input.
+    /// </summary>
+    private Vector2 RawMoveVector()
+    {
+        return new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
+    }
+
+    /// <summary>
+    /// Get a normalized vector2 based on horizontal and vertical input.
+    /// Takes into account a custom analogue dead zone value.
+    /// </summary>
+    private Vector2 AnalogueMoveVector()
+    {
+        float x = Input.GetAxis("Horizontal");
+        float y = Input.GetAxis("Vertical");
+
+        if (Mathf.Abs(x) > inputDeadzone)
         {
-            float horizontalMovement = 0, verticalMovement = 0;
-
-            if(Mathf.Abs(Input.GetAxisRaw("Horizontal")) > inputDeadzone)
-            {
-                if(Input.GetAxisRaw("Horizontal") > 0)
-                {
-                    horizontalMovement = 1;
-                }
-                else
-                {
-                    horizontalMovement = -1;
-                }
-                
-            }
-            if(Mathf.Abs(Input.GetAxisRaw("Vertical")) > inputDeadzone)
-            {
-                if(Input.GetAxisRaw("Vertical") > 0)
-                {
-                    verticalMovement = 1;
-                }
-                else
-                {
-                    verticalMovement = -1;
-                }
-            }
-
-            Vector2 moveVector = new Vector2(horizontalMovement, verticalMovement).normalized;
-            return moveVector;
+            if (x > 0)
+                x = 1;
+            else
+                x = -1;
         }
+        
+        if (Mathf.Abs(y) > inputDeadzone)
+        {
+            if (y > 0)
+                y = 1;
+            else
+                y = -1;
+        }
+        return new Vector2(x, y);
     }
 }
