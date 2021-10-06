@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.Animations;
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "New Enemy", menuName = "Enemy")]
@@ -14,6 +15,9 @@ public class EnemySO : ScriptableObject
     
     [Tooltip("Attach the sprite associated with this enemy.'")]
     public Sprite sprite;
+    
+    [Tooltip("Attach the animator controller associated with this enemies sprite.")]
+    public AnimatorController animController;
     
     [Tooltip("The base health value of this enemy. This value will be used by modifier system.")]
     public float baseHealth;
