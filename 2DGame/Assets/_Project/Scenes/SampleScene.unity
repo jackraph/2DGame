@@ -1774,6 +1774,7 @@ GameObject:
   - component: {fileID: 696750174}
   - component: {fileID: 696750173}
   - component: {fileID: 696750176}
+  - component: {fileID: 696750177}
   m_Layer: 0
   m_Name: Blob_2
   m_TagString: Untagged
@@ -1877,6 +1878,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 871dce233f280474bb7fe37e26caab32, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  moveSpeed: 0
+--- !u!50 &696750177
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 696750172}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &697770641
 GameObject:
   m_ObjectHideFlags: 0
@@ -4325,6 +4348,7 @@ GameObject:
   - component: {fileID: 1289937776}
   - component: {fileID: 1289937775}
   - component: {fileID: 1289937778}
+  - component: {fileID: 1289937779}
   m_Layer: 0
   m_Name: Blob_1
   m_TagString: Untagged
@@ -4428,6 +4452,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 871dce233f280474bb7fe37e26caab32, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  moveSpeed: 0
+--- !u!50 &1289937779
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1289937774}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1001 &1323021152
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4611,6 +4657,7 @@ GameObject:
   - component: {fileID: 1756689375}
   - component: {fileID: 1756689374}
   - component: {fileID: 1756689373}
+  - component: {fileID: 1756689377}
   m_Layer: 0
   m_Name: Blob
   m_TagString: Untagged
@@ -4630,6 +4677,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 871dce233f280474bb7fe37e26caab32, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  moveSpeed: 0
 --- !u!95 &1756689374
 Animator:
   serializedVersion: 3
@@ -4714,6 +4762,27 @@ Transform:
   m_Father: {fileID: 2055305269}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!50 &1756689377
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1756689372}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1001 &1822021767
 PrefabInstance:
   m_ObjectHideFlags: 0

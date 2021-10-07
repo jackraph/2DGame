@@ -25,9 +25,11 @@
     <explicitExcludes>
       <Path>.idea</Path>
       <Path>.vscode</Path>
+      <Path>2D Game</Path>
+      <Path>2DGame Building IT</Path>
       <Path>Library</Path>
       <Path>Logs</Path>
-      <Path>Temp</Path>
+      <Path>New Unity Project</Path>
       <Path>UserSettings</Path>
       <Path>obj</Path>
     </explicitExcludes>
