@@ -9,7 +9,11 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     private Rigidbody2D rb;
-    
+
+    [SerializeField]
+    //This should be a base weapon class in future
+    private TestWeapon currentWeapon;
+
     [SerializeField]
     private float movementSpeed = 10;
     
@@ -29,8 +33,25 @@ public class PlayerController : MonoBehaviour
     void FixedUpdate()
     {
         MovePlayer();
+
     }
 
+    void Update()
+    {
+        if(Input.GetButtonDown("Attack"))
+        {
+            UseMainWeapon();
+        }
+    }
+
+    void UseMainWeapon()
+    {
+        if(currentWeapon != null)
+        {
+            currentWeapon.OnUse();
+        }
+        
+    }
     void MovePlayer()
     {
         rb.velocity = GetMoveVector() * (Time.deltaTime * movementSpeed);

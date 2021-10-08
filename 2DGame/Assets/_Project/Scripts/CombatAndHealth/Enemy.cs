@@ -11,6 +11,8 @@ public class Enemy : MonoBehaviour, IDamagable
 
     [SerializeField] private float moveSpeed;
     
+    [SerializeField]
+    private float health = 20;
     //
     private bool moving;
     
@@ -33,7 +35,15 @@ public class Enemy : MonoBehaviour, IDamagable
 
     public void TakeDamage(float amount)
     {
-        
+        //Basic take damage function for testing.
+        health -= amount;
+
+        //Remove the enemy from scene when dead
+        if(health <= 0)
+        {
+            Destroy(this.gameObject);
+        }
+
     }
 
     public virtual void MoveToCoordinate(Vector2 coordinate)
