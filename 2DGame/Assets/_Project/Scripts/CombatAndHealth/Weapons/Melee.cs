@@ -23,7 +23,6 @@ public class Melee : MonoBehaviour, IUsable
         _collider.enabled = false;
     }
     
-    
     private void OnTriggerEnter2D(Collider2D target)
     {
         IDamagable damagable = target.GetComponent<IDamagable>();

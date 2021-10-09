@@ -14,6 +14,6 @@ public class Ranged : MonoBehaviour, IUsable
 
     public void OffUse()
     {
-        throw new System.NotImplementedException();
+        
     }
 }

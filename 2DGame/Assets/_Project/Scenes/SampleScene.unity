@@ -4213,7 +4213,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentWeapon: {fileID: 0}
-  movementSpeed: 100
+  movementSpeed: 4
   useAnalogueMovement: 0
 --- !u!61 &1046595402
 BoxCollider2D:
