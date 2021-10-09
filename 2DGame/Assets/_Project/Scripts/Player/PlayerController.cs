@@ -54,7 +54,7 @@ public class PlayerController : MonoBehaviour
     }
     void MovePlayer()
     {
-        rb.velocity = GetMoveVector() * (Time.deltaTime * movementSpeed);
+        rb.velocity = GetMoveVector() * movementSpeed;
     }
 
     /// <summary>
