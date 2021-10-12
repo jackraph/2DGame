@@ -7,6 +7,9 @@ public class Enemy : MonoBehaviour, IDamagable
     private Animator _anim;
     [SerializeField]
     private float health = 20;
+
+    [SerializeField]
+    private float touchDamage = 5;
     
     void Start()
     {
@@ -26,6 +29,16 @@ public class Enemy : MonoBehaviour, IDamagable
         if(health <= 0)
         {
             Destroy(this.gameObject);
+        }
+    }
+
+    public void OnCollisionEnter2D(Collision2D hit)
+    {
+        //Debug.Log(hit.collider.gameObject.name);
+        IDamagable damageComp = hit.collider.gameObject.GetComponent<IDamagable>();
+        if(damageComp != null)
+        {
+            damageComp.TakeDamage(touchDamage);
         }
     }
 }
