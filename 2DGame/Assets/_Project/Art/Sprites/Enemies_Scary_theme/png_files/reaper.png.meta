@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< HEAD:2DGame/Assets/_Project/Art/Sprites/Enemies_Scary_theme/png_files/reaper.png.meta
 guid: 796ce811b7caecd4bb713c66a5c225b4
+=======
+guid: 0e768c3011d32a94b9d91accdbd4d0b8
+>>>>>>> 6dc4a263c2ac1ffd7973ea83aec67ec27c248fca:2DGame/Assets/_Project/Art/Sprites/Enemies_Scary_theme/reaper.png.meta
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}

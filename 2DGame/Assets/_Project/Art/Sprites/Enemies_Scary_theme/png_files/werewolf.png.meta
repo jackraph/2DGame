@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< HEAD:2DGame/Assets/_Project/Art/Sprites/Enemies_Scary_theme/png_files/werewolf.png.meta
 guid: d62d40e966d5fd141a0bc5f49f102222
+=======
+guid: 9ddba04d8a56d9347a00c69d5ba7ae21
+>>>>>>> 6dc4a263c2ac1ffd7973ea83aec67ec27c248fca:2DGame/Assets/_Project/Art/Sprites/Enemies_Scary_theme/werewolf.png.meta
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
