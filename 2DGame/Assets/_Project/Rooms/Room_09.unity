@@ -7017,6 +7017,7 @@ GameObject:
   - component: {fileID: 1675354576}
   - component: {fileID: 1675354578}
   - component: {fileID: 1675354577}
+  - component: {fileID: 1675354579}
   m_Layer: 0
   m_Name: Walls
   m_TagString: Untagged
@@ -7588,16 +7589,6 @@ Tilemap:
   - first: {x: 5, y: -5, z: 0}
     second:
       serializedVersion: 2
-      m_TileIndex: 1
-      m_TileSpriteIndex: 1
-      m_TileMatrixIndex: 0
-      m_TileColorIndex: 0
-      m_TileObjectToInstantiateIndex: 65535
-      dummyAlignment: 0
-      m_AllTileFlags: 1073741825
-  - first: {x: 6, y: -5, z: 0}
-    second:
-      serializedVersion: 2
       m_TileIndex: 0
       m_TileSpriteIndex: 4
       m_TileMatrixIndex: 0
@@ -8096,16 +8087,6 @@ Tilemap:
       dummyAlignment: 0
       m_AllTileFlags: 1073741825
   - first: {x: 5, y: 4, z: 0}
-    second:
-      serializedVersion: 2
-      m_TileIndex: 1
-      m_TileSpriteIndex: 1
-      m_TileMatrixIndex: 0
-      m_TileColorIndex: 0
-      m_TileObjectToInstantiateIndex: 65535
-      dummyAlignment: 0
-      m_AllTileFlags: 1073741825
-  - first: {x: 6, y: 4, z: 0}
     second:
       serializedVersion: 2
       m_TileIndex: 0
@@ -8625,6 +8606,16 @@ Tilemap:
       m_TileObjectToInstantiateIndex: 65535
       dummyAlignment: 0
       m_AllTileFlags: 1073741825
+  - first: {x: -2, y: 8, z: 0}
+    second:
+      serializedVersion: 2
+      m_TileIndex: 7
+      m_TileSpriteIndex: 7
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_TileObjectToInstantiateIndex: 65535
+      dummyAlignment: 0
+      m_AllTileFlags: 1073741825
   - first: {x: -1, y: 8, z: 0}
     second:
       serializedVersion: 2
@@ -8636,6 +8627,16 @@ Tilemap:
       dummyAlignment: 0
       m_AllTileFlags: 1073741825
   - first: {x: 0, y: 8, z: 0}
+    second:
+      serializedVersion: 2
+      m_TileIndex: 7
+      m_TileSpriteIndex: 7
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_TileObjectToInstantiateIndex: 65535
+      dummyAlignment: 0
+      m_AllTileFlags: 1073741825
+  - first: {x: 1, y: 8, z: 0}
     second:
       serializedVersion: 2
       m_TileIndex: 7
@@ -8759,7 +8760,7 @@ Tilemap:
   m_TileAssetArray:
   - m_RefCount: 7
     m_Data: {fileID: 11400000, guid: 87252b8a780a494459a1119a3655dc93, type: 2}
-  - m_RefCount: 52
+  - m_RefCount: 50
     m_Data: {fileID: 11400000, guid: f24da70245652b246bb591f06a25596d, type: 2}
   - m_RefCount: 7
     m_Data: {fileID: 11400000, guid: 328163c20086aef458506bb0cb085ecc, type: 2}
@@ -8771,7 +8772,7 @@ Tilemap:
     m_Data: {fileID: 11400000, guid: 5c36a77c2b5d8e64daa12ebe10793f84, type: 2}
   - m_RefCount: 24
     m_Data: {fileID: 11400000, guid: cae290489cca46f499eeaf7f9d5a56b8, type: 2}
-  - m_RefCount: 22
+  - m_RefCount: 24
     m_Data: {fileID: 11400000, guid: 688d136058f04394a9f75546036070cf, type: 2}
   - m_RefCount: 23
     m_Data: {fileID: 11400000, guid: 984cbaefd4be6934985c787ba0a81249, type: 2}
@@ -8782,7 +8783,7 @@ Tilemap:
   m_TileSpriteArray:
   - m_RefCount: 0
     m_Data: {fileID: 0}
-  - m_RefCount: 52
+  - m_RefCount: 50
     m_Data: {fileID: 1117894991813259235, guid: 099e6807f57579d478dcffb830d0c9fb, type: 3}
   - m_RefCount: 0
     m_Data: {fileID: 0}
@@ -8794,7 +8795,7 @@ Tilemap:
     m_Data: {fileID: -4504773450284738678, guid: 099e6807f57579d478dcffb830d0c9fb, type: 3}
   - m_RefCount: 24
     m_Data: {fileID: 7135262713923979976, guid: 099e6807f57579d478dcffb830d0c9fb, type: 3}
-  - m_RefCount: 22
+  - m_RefCount: 24
     m_Data: {fileID: 3646751896613306905, guid: 099e6807f57579d478dcffb830d0c9fb, type: 3}
   - m_RefCount: 23
     m_Data: {fileID: 1953342205589111454, guid: 099e6807f57579d478dcffb830d0c9fb, type: 3}
@@ -8884,6 +8885,22 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!19719996 &1675354579
+TilemapCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1675354575}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_MaximumTileChangeCount: 1000
+  m_ExtrusionFactor: 0.00001
 --- !u!1 &1880839489
 GameObject:
   m_ObjectHideFlags: 0
