@@ -30,13 +30,13 @@ public class Hands : MonoBehaviour
         if(Input.GetMouseButtonDown(0))
         {
             _equipped.OnUse();
-            _anim.SetBool("Active", true);
+            //anim.SetBool("Active", true);
         }
         
         if(Input.GetMouseButtonUp(0))
         {
             _equipped.OffUse();
-            _anim.SetBool("Active", false);
+            //_anim.SetBool("Active", false);
         }
 
         //MouseWheel up/down check for weapon cycling

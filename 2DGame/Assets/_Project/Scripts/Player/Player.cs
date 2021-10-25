@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -6,6 +7,12 @@ public class Player : MonoBehaviour
 {
     [SerializeField] private Transform arms;
     [SerializeField] private float handRadius;
+    private LineRenderer armLine;
+
+    private void Awake()
+    {
+        armLine = GetComponent<LineRenderer>();
+    }
 
     void Update()
     {
@@ -40,5 +47,13 @@ public class Player : MonoBehaviour
             //Swing action.
         }
         //~~~~~~~~~~~~~~~~~~~
+        
+        Debug.DrawLine(pos, mousePos, Color.cyan);
+        Debug.DrawLine(pos, pos + dirToMouse, Color.red);
+        
+        armLine.SetPosition(0, pos);
+        armLine.SetPosition(1, dirToMouse + pos);
     }
+
+ 
 }
