@@ -41,16 +41,6 @@ public class Player : MonoBehaviour
         }
         //~~~~~~~~~~~~~~~~~~~
         
-        //~~~~~~~~~~~~~~~~~~~
-        if (Input.GetMouseButton(0))
-        {
-            //Swing action.
-        }
-        //~~~~~~~~~~~~~~~~~~~
-        
-        Debug.DrawLine(pos, mousePos, Color.cyan);
-        Debug.DrawLine(pos, pos + dirToMouse, Color.red);
-        
         armLine.SetPosition(0, pos);
         armLine.SetPosition(1, dirToMouse + pos);
     }
