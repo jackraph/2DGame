@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 2291834954702864823}
   - component: {fileID: 1572308959446189929}
   m_Layer: 0
-  m_Name: boss-idle-away
+  m_Name: boss-idle-back
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
