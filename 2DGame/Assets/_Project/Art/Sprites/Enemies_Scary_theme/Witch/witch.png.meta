@@ -1,73 +1,91 @@
 fileFormatVersion: 2
-guid: f718a8a81a429f545969a678b9acfeab
+guid: 513c7dcad073afc45b4ccd065587ff53
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 5076244834154533865
-    second: boss_left_0
+      213: -6161070754210539384
+    second: witch_0
   - first:
-      213: 5701184633119551444
-    second: boss_left_1
+      213: -4793536089062914485
+    second: witch_1
   - first:
-      213: -6164886016423380098
-    second: boss_left_2
+      213: 1446085396551072795
+    second: witch_2
   - first:
-      213: 8939636125044587752
-    second: boss_left_3
+      213: -1296917910504774718
+    second: witch_3
   - first:
-      213: 3644320774594430999
-    second: boss_left_4
+      213: 8150378230139850462
+    second: witch_4
   - first:
-      213: 8382268775707674572
-    second: boss_left_5
+      213: 4627851057977588833
+    second: witch_5
   - first:
-      213: -6966212716559631354
-    second: boss_left_6
+      213: 8598073001099940306
+    second: witch_6
   - first:
-      213: 2733974838405767634
-    second: boss_left_7
+      213: 8190057526632135862
+    second: witch_7
   - first:
-      213: -288367846949078474
-    second: boss_left_8
+      213: 4130314569305396639
+    second: witch_8
   - first:
-      213: 3516702672556648345
-    second: boss_left_9
+      213: -3529584963905640801
+    second: witch_9
   - first:
-      213: -2008984292652868757
-    second: boss_left_10
+      213: 3802989357508165382
+    second: witch_10
   - first:
-      213: 7827607195246005114
-    second: boss_left_11
+      213: -7124819208492482280
+    second: witch_11
   - first:
-      213: 5547788767890443146
-    second: boss_left_12
+      213: -8754525697562333123
+    second: witch_12
   - first:
-      213: 1980203441024782028
-    second: boss_left_13
+      213: 108631366544865447
+    second: witch_13
   - first:
-      213: -695911632214021134
-    second: boss_left_14
+      213: -2277848822555775021
+    second: witch_14
   - first:
-      213: 800635532696078433
-    second: boss_left_15
+      213: -4009502831136379589
+    second: witch_15
   - first:
-      213: 5208441283554172261
-    second: boss_left_16
+      213: 4333942755676591174
+    second: witch_16
   - first:
-      213: 321365148943767928
-    second: boss_left_17
+      213: 9037893645626413846
+    second: witch_17
   - first:
-      213: 1540672343002340299
-    second: boss_left_18
+      213: 5394006930923550585
+    second: witch_18
   - first:
-      213: -7264345592879081406
-    second: boss_left_19
+      213: 5909509537993385102
+    second: witch_19
   - first:
-      213: 3969825654464815441
-    second: boss_left_20
+      213: 8680742438629614359
+    second: witch_20
   - first:
-      213: 7744938929694368229
-    second: boss_left_21
+      213: 2619045481994046765
+    second: witch_21
+  - first:
+      213: 5973183398801502870
+    second: witch_22
+  - first:
+      213: 7649493352041872302
+    second: witch_23
+  - first:
+      213: 3282034538311618481
+    second: witch_24
+  - first:
+      213: 1181840253384739446
+    second: witch_25
+  - first:
+      213: 623159315357892458
+    second: witch_26
+  - first:
+      213: 4387639172768932576
+    second: witch_27
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -134,7 +152,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -146,7 +164,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -157,348 +175,12 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: boss_left_0
+      name: witch_0
       rect:
         serializedVersion: 2
-        x: 82
-        y: 121
-        width: 21
-        height: 17
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 9e351b418c1727640800000000000000
-      internalID: 5076244834154533865
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: boss_left_1
-      rect:
-        serializedVersion: 2
-        x: 104
-        y: 119
-        width: 15
-        height: 18
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 4dfa108b73dae1f40800000000000000
-      internalID: 5701184633119551444
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: boss_left_2
-      rect:
-        serializedVersion: 2
-        x: 120
-        y: 119
-        width: 15
-        height: 19
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e7bbf4eb4dce17aa0800000000000000
-      internalID: -6164886016423380098
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: boss_left_3
-      rect:
-        serializedVersion: 2
-        x: 136
-        y: 119
-        width: 15
-        height: 19
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 8ec388601b7ff0c70800000000000000
-      internalID: 8939636125044587752
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: boss_left_4
-      rect:
-        serializedVersion: 2
-        x: 152
-        y: 119
-        width: 15
-        height: 19
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 7180741af6a339230800000000000000
-      internalID: 3644320774594430999
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: boss_left_5
-      rect:
-        serializedVersion: 2
-        x: 27
-        y: 93
-        width: 18
-        height: 18
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: cc787e35a0dc35470800000000000000
-      internalID: 8382268775707674572
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: boss_left_6
-      rect:
-        serializedVersion: 2
-        x: 48
-        y: 93
-        width: 18
-        height: 18
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 60c77af517a035f90800000000000000
-      internalID: -6966212716559631354
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: boss_left_7
-      rect:
-        serializedVersion: 2
-        x: 74
-        y: 92
-        width: 14
-        height: 20
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 2d1280c51a701f520800000000000000
-      internalID: 2733974838405767634
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: boss_left_8
-      rect:
-        serializedVersion: 2
-        x: 90
-        y: 93
-        width: 15
-        height: 21
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 63ab4f598f28ffbf0800000000000000
-      internalID: -288367846949078474
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: boss_left_9
-      rect:
-        serializedVersion: 2
-        x: 106
-        y: 92
-        width: 13
-        height: 19
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 997e76ac276ddc030800000000000000
-      internalID: 3516702672556648345
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: boss_left_10
-      rect:
-        serializedVersion: 2
-        x: 124
-        y: 92
-        width: 10
-        height: 18
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b6b161d0e67ae14e0800000000000000
-      internalID: -2008984292652868757
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: boss_left_11
-      rect:
-        serializedVersion: 2
-        x: 138
-        y: 93
-        width: 13
-        height: 20
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a7b0ee9854f31ac60800000000000000
-      internalID: 7827607195246005114
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: boss_left_12
-      rect:
-        serializedVersion: 2
-        x: 154
-        y: 92
-        width: 13
-        height: 19
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a8b030fad74bdfc40800000000000000
-      internalID: 5547788767890443146
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: boss_left_13
-      rect:
-        serializedVersion: 2
-        x: 106
-        y: 61
-        width: 15
-        height: 21
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ccec94db9881b7b10800000000000000
-      internalID: 1980203441024782028
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: boss_left_14
-      rect:
-        serializedVersion: 2
-        x: 124
-        y: 60
-        width: 12
-        height: 19
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 2fb22debe00a756f0800000000000000
-      internalID: -695911632214021134
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: boss_left_15
-      rect:
-        serializedVersion: 2
-        x: 138
-        y: 61
-        width: 13
-        height: 20
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 168c7e866cd6c1b00800000000000000
-      internalID: 800635532696078433
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: boss_left_16
-      rect:
-        serializedVersion: 2
-        x: 154
-        y: 61
-        width: 17
+        x: 5
+        y: 256
+        width: 20
         height: 22
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -507,20 +189,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 56dd9bb70c9184840800000000000000
-      internalID: 5208441283554172261
+      spriteID: 8889b33baca7f7aa0800000000000000
+      internalID: -6161070754210539384
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: boss_left_17
+      name: witch_1
       rect:
         serializedVersion: 2
-        x: 92
-        y: 30
-        width: 26
-        height: 18
+        x: 29
+        y: 255
+        width: 20
+        height: 22
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -528,20 +210,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 879dbf976e7b57400800000000000000
-      internalID: 321365148943767928
+      spriteID: b46c3610350f97db0800000000000000
+      internalID: -4793536089062914485
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: boss_left_18
+      name: witch_2
       rect:
         serializedVersion: 2
-        x: 123
-        y: 30
-        width: 23
-        height: 18
+        x: 53
+        y: 255
+        width: 20
+        height: 22
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -549,20 +231,335 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bcb5ce74551916510800000000000000
-      internalID: 1540672343002340299
+      spriteID: b1c7e48a107811410800000000000000
+      internalID: 1446085396551072795
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: boss_left_19
+      name: witch_3
+      rect:
+        serializedVersion: 2
+        x: 77
+        y: 256
+        width: 20
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c36581280c600ee0800000000000000
+      internalID: -1296917910504774718
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: witch_4
+      rect:
+        serializedVersion: 2
+        x: 101
+        y: 255
+        width: 20
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ede009851d5fb1170800000000000000
+      internalID: 8150378230139850462
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: witch_5
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 226
+        width: 20
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 16c7b20940e693040800000000000000
+      internalID: 4627851057977588833
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: witch_6
+      rect:
+        serializedVersion: 2
+        x: 26
+        y: 226
+        width: 20
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d1507707dd725770800000000000000
+      internalID: 8598073001099940306
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: witch_7
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 226
+        width: 20
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6bc3cec7dede8a170800000000000000
+      internalID: 8190057526632135862
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: witch_8
+      rect:
+        serializedVersion: 2
+        x: 74
+        y: 226
+        width: 20
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f95911aa733d15930800000000000000
+      internalID: 4130314569305396639
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: witch_9
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 226
+        width: 20
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f9628d50d25640fc0800000000000000
+      internalID: -3529584963905640801
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: witch_10
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 200
+        width: 20
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 60f7ddaebaee6c430800000000000000
+      internalID: 3802989357508165382
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: witch_11
+      rect:
+        serializedVersion: 2
+        x: 28
+        y: 200
+        width: 20
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8110de4cdae8f1d90800000000000000
+      internalID: -7124819208492482280
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: witch_12
+      rect:
+        serializedVersion: 2
+        x: 52
+        y: 200
+        width: 25
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d30b4c3f24da18680800000000000000
+      internalID: -8754525697562333123
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: witch_13
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 200
+        width: 31
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a83f5ef6afe18100800000000000000
+      internalID: 108631366544865447
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: witch_14
+      rect:
+        serializedVersion: 2
+        x: 54
+        y: 114
+        width: 20
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3df658f70947360e0800000000000000
+      internalID: -2277848822555775021
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: witch_15
+      rect:
+        serializedVersion: 2
+        x: 78
+        y: 115
+        width: 20
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b3d61381b626b58c0800000000000000
+      internalID: -4009502831136379589
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: witch_16
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 114
+        width: 20
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6441bfc59f1452c30800000000000000
+      internalID: 4333942755676591174
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: witch_17
+      rect:
+        serializedVersion: 2
+        x: 126
+        y: 114
+        width: 20
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6139259c26c0d6d70800000000000000
+      internalID: 9037893645626413846
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: witch_18
       rect:
         serializedVersion: 2
         x: 150
-        y: 30
-        width: 13
-        height: 19
+        y: 115
+        width: 20
+        height: 22
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -570,20 +567,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 24894c2eb2cdf2b90800000000000000
-      internalID: -7264345592879081406
+      spriteID: 97771b999bc5bda40800000000000000
+      internalID: 5394006930923550585
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: boss_left_20
+      name: witch_19
       rect:
         serializedVersion: 2
-        x: 130
-        y: 5
-        width: 17
-        height: 18
+        x: 57
+        y: 85
+        width: 20
+        height: 23
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -591,20 +588,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 151ab925667a71730800000000000000
-      internalID: 3969825654464815441
+      spriteID: e84e0e86d9bc20250800000000000000
+      internalID: 5909509537993385102
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: boss_left_21
+      name: witch_20
       rect:
         serializedVersion: 2
-        x: 154
-        y: 5
-        width: 12
-        height: 18
+        x: 81
+        y: 85
+        width: 20
+        height: 23
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -612,8 +609,155 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5e1e68f0cec8b7b60800000000000000
-      internalID: 7744938929694368229
+      spriteID: 7132d216141387870800000000000000
+      internalID: 8680742438629614359
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: witch_21
+      rect:
+        serializedVersion: 2
+        x: 105
+        y: 85
+        width: 20
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d2dc8d45df7b85420800000000000000
+      internalID: 2619045481994046765
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: witch_22
+      rect:
+        serializedVersion: 2
+        x: 129
+        y: 85
+        width: 20
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 692f2d767a205e250800000000000000
+      internalID: 5973183398801502870
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: witch_23
+      rect:
+        serializedVersion: 2
+        x: 153
+        y: 85
+        width: 20
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eabfa28cca5782a60800000000000000
+      internalID: 7649493352041872302
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: witch_24
+      rect:
+        serializedVersion: 2
+        x: 62
+        y: 59
+        width: 31
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1bf80ac06012c8d20800000000000000
+      internalID: 3282034538311618481
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: witch_25
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 59
+        width: 25
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 67a4144e27db66010800000000000000
+      internalID: 1181840253384739446
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: witch_26
+      rect:
+        serializedVersion: 2
+        x: 127
+        y: 59
+        width: 20
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a6ff16e7818e5a800800000000000000
+      internalID: 623159315357892458
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: witch_27
+      rect:
+        serializedVersion: 2
+        x: 151
+        y: 59
+        width: 20
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e22b77b49604ec30800000000000000
+      internalID: 4387639172768932576
       vertices: []
       indices: 
       edges: []
