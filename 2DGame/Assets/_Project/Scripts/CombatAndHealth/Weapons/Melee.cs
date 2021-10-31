@@ -3,10 +3,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Melee : MonoBehaviour, IUsable
+public class Melee : MonoBehaviour, IUsable, IModifiable
 {
     [SerializeField] private float damage;
     private BoxCollider2D _collider;
+
+    [SerializeField] private SpriteRenderer fireModSprite;
 
     private void Start()
     {
@@ -29,4 +31,20 @@ public class Melee : MonoBehaviour, IUsable
         damagable?.TakeDamage(damage);
     }
 
+    public void Mod_Fire()
+    {
+        if(fireModSprite)
+        {
+            fireModSprite.enabled = true;
+        }
+
+        damage *= 1.5f;
+
+        Debug.Log("Fire called");
+    }
+
+    public void Mod_FastForward()
+    {
+
+    }
 }
