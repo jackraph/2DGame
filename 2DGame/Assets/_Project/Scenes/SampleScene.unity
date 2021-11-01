@@ -2464,6 +2464,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 20
   touchDamage: 5
+  _ai:
+    currentState: 0
+    waypoints: []
 --- !u!61 &511069437
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2557,7 +2560,7 @@ SpriteRenderer:
   m_Size: {x: 1, y: 0.5625}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &511069440
@@ -7538,6 +7541,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 20
   touchDamage: 5
+  _ai:
+    currentState: 0
+    waypoints: []
 --- !u!61 &1635884493
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -7631,7 +7637,7 @@ SpriteRenderer:
   m_Size: {x: 1, y: 0.5625}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &1635884496
