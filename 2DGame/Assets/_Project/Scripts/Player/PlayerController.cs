@@ -6,7 +6,7 @@ using UnityEngine;
 //Made some slight changes to this script just so it's easier to implement an input class later.
 //Didn't change any logic. -Jack
 [RequireComponent(typeof(Rigidbody2D))]
-public class PlayerController : MonoBehaviour
+public class PlayerController : MonoBehaviour, IModifiable
 {
     private Rigidbody2D rb;
 
@@ -101,5 +101,15 @@ public class PlayerController : MonoBehaviour
                 y = -1;
         }
         return new Vector2(x, y);
+    }
+
+    public void Mod_Fire()
+    {
+
+    }
+
+    public void Mod_FastForward()
+    {
+        movementSpeed *= 2;
     }
 }
