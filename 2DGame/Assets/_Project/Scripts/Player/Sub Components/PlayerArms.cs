@@ -3,24 +3,27 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Player : MonoBehaviour
+[Serializable]
+public class PlayerArms 
 {
     [SerializeField] private Transform arms;
     [SerializeField] private float handRadius;
-    private LineRenderer armLine;
+    private LineRenderer _armLine;
+    private PlayerController _pc;
 
-    private void Awake()
+    public void Initialize(PlayerController pc)
     {
-        armLine = GetComponent<LineRenderer>();
+        _pc = pc;
+        _armLine = _pc.GetComponent<LineRenderer>();
     }
 
-    void Update()
+    public void Update()
     {
         //Get mouse position as a point in world space.
         Vector2 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         
         //Get this pos as a vector2.
-        Vector2 pos = transform.position;
+        Vector2 pos = _pc.transform.position;
         
         //Get the direction to the mouse clamped to the defined hand radius.
         Vector2 dirToMouse = Vector2.ClampMagnitude(mousePos - pos, handRadius);
@@ -31,23 +34,19 @@ public class Player : MonoBehaviour
         //Flip sprite based on direction to mouse.
         if (dirToMouse.x > 0)
         {
-            transform.localScale = Vector3.one;
+            _pc.transform.localScale = Vector3.one;
             arms.transform.right = dirToMouse;
         } 
         else if (dirToMouse.x < 0)
         {
-            transform.localScale = new Vector3(-1, 1, 1);
+            _pc.transform.localScale = new Vector3(-1, 1, 1);
             arms.transform.right = -dirToMouse;
         }
         //~~~~~~~~~~~~~~~~~~~
         
-        armLine.SetPosition(0, pos);
-        armLine.SetPosition(1, dirToMouse + pos);
+        //Update arm line renderer.
+        _armLine.SetPosition(0, pos);
+        _armLine.SetPosition(1, dirToMouse + pos);
     }
-
-<<<<<<< HEAD
- 
-=======
     
->>>>>>> c611b241c9c2476754c82f5043dcf409cd403389
 }

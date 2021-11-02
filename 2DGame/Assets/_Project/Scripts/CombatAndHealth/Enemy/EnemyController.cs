@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
@@ -53,5 +54,13 @@ public class EnemyController : MonoBehaviour, IDamagable
         IDamagable damageComp = hit.collider.gameObject.GetComponent<IDamagable>();
         damageComp?.TakeDamage(touchDamage);
     }
-    
+
+    public void OnDrawGizmos()
+    {
+        foreach (Vector2 waypoint in _ai.waypoints)
+        {
+            Gizmos.color = Color.red;
+            Gizmos.DrawSphere(waypoint, 0.1f);
+        }
+    }
 }

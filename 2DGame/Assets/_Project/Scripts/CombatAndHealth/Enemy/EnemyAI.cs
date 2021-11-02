@@ -18,8 +18,15 @@ public class EnemyAI
     
     //Waypoints.
     [Tooltip("Each waypoint is connected to the previous and the next waypoint in the list. Starting position is not stored as a waypoint.")]
-    [SerializeField] private Vector2[] waypoints;
-
+    [SerializeField] public Vector2[] waypoints;
+    private int currPointIndex = 0;
+    
+    //Enemy info.
+    [Tooltip("The speed this enemy moves at.")]
+    [SerializeField] private float speed;
+    
+    [Tooltip("The detection radius this enemy has in its patrol state. If a player enters this radius the enemy moves to attack state.")]
+    [SerializeField] private float detectionRadius;
 
     //References to main class.
     private EnemyController _ec;
@@ -55,7 +62,24 @@ public class EnemyAI
     /// </summary>
     private void Patrol()
     {
-        
+        if (currPointIndex < waypoints.Length)
+        {
+            //Get direction to next waypoint.
+            Vector2 dir = waypoints[currPointIndex] - (Vector2) _rb.transform.position;
+            dir = dir.normalized;
+            //Move in that direction.
+            _rb.velocity = dir * speed;
+
+            if (Vector2.Distance(_rb.transform.position, waypoints[currPointIndex]) < 0.1f)
+            {
+                currPointIndex++;
+            }
+        }
+        else
+        {
+            currPointIndex = 0;
+        }
+
     }
 
     /// <summary>
@@ -63,6 +87,8 @@ public class EnemyAI
     /// </summary>
     private void Attack()
     {
+        //Get direction to the player.
         
+        //Move in that direction.
     }
 }
