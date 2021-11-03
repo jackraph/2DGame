@@ -1,52 +1,57 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Threading;
 using UnityEngine;
 
+/// <summary>
+/// TODO finish implementing new input system with with class.
+/// </summary>
 [Serializable]
-public class PlayerHands
+public class CHands
 {
-    private PlayerController _pc;
-    
-    [Tooltip("Attach the hands game object.")]
-    [SerializeField] private GameObject handsObject;
-    
-    [Tooltip("List of holdable objects.")]
-    [SerializeField] private GameObject[] holdableStuff;
-
-    [Tooltip("Object to be activated on block input (Shield object)")]
-    [SerializeField] private GameObject blockTool;
-    
+    private CController _cc;
+    private CharacterInputHandler _input;
     private Animator _anim;
-    
     private IUsable _equipped;
     private IUsable _equippedBlockTool;
     private int _currentEquipIndex;
     
-    public void Initialize(PlayerController pc)
+    [SerializeField] private GameObject handObject;
+    [SerializeField] private GameObject[] holdableStuff;
+    [SerializeField] private GameObject blockTool;
+
+    public void Initialize(CController cc, CharacterInputHandler input)
     {
-        _pc = pc;
-        _anim = handsObject.GetComponent<Animator>();
-        
+        _cc = cc;
+        _input = input;
+        _anim = handObject.GetComponent<Animator>();
         _equipped = holdableStuff[0].GetComponent<IUsable>();
         _equippedBlockTool = blockTool.GetComponent<IUsable>();
         _currentEquipIndex = 0;
     }
 
+    private bool active = false;
     public void Update()
     {
-        if(Input.GetMouseButtonDown(0))
+
+        if (_input.Attack > 0 && !active)
         {
+            //active = true;
             _equipped.OnUse();
+            Debug.Log("Pressed!");
+            // TODO
+            //Determine which animation to play based on the category of weapon being held.
             _anim.SetBool("Active", true);
         }
-        
-        if(Input.GetMouseButtonUp(0))
+        else
         {
             _equipped.OffUse();
             _anim.SetBool("Active", false);
         }
         
+
+
         //MouseWheel up/down check for weapon cycling
         if(Input.mouseScrollDelta.y > 0)
         {
