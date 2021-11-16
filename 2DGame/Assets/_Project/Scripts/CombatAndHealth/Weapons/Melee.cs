@@ -52,7 +52,7 @@ public class Melee : MonoBehaviour, IUsable, IModifiable
             fireModSprite.enabled = true;
         }
 
-        damage *= 1.5f;
+        damage *= 2f;
 
         Debug.Log("Fire called");
     }
