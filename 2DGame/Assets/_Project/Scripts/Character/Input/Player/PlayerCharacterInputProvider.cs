@@ -16,7 +16,13 @@ public class PlayerCharacterInputProvider : CharacterInputProvider
 
     private void Update()
     {
-        base.Attack = _inputActions.PlayerControls.Attack.ReadValue<float>();
+        base.Attack = _inputActions.PlayerControls.Attack.triggered &&
+                        _inputActions.PlayerControls.Attack.ReadValue<float>() > 0;
+
         base.Movement = _inputActions.PlayerControls.Movement.ReadValue<Vector2>();
+
+        base.Hand = (Vector2)Camera.main.ScreenToWorldPoint(_inputActions.PlayerControls.Hand.ReadValue<Vector2>());
     }
+
+
 }

@@ -9,15 +9,20 @@ public class Melee : MonoBehaviour, IUsable, IModifiable
     private BoxCollider2D _collider;
 
     [SerializeField] private SpriteRenderer fireModSprite;
+    private AudioSource _audio;
+
+    [SerializeField] private float animLength = 0;
 
     private void Start()
     {
         _collider = GetComponent<BoxCollider2D>();
+        _audio = GetComponent<AudioSource>();
     }
 
     public void OnUse()
     {
         _collider.enabled = true;
+        StartCoroutine(AnimCoroutine());
     }
 
     public void OffUse()
@@ -29,6 +34,15 @@ public class Melee : MonoBehaviour, IUsable, IModifiable
     {
         IDamagable damagable = target.GetComponent<IDamagable>();
         damagable?.TakeDamage(damage);
+        _audio.Play();
+        
+    }
+
+    private IEnumerator AnimCoroutine()
+    {
+        Debug.Log("Coroutine worked.");
+        yield return new WaitForSeconds(animLength);
+        OffUse();
     }
 
     public void Mod_Fire()

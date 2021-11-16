@@ -14,11 +14,12 @@ public class CharacterInputHandler
 
     private InputStates _states;
     
-    public float Attack
+    public bool Attack
     {
         get { return _states.Attack;}
         set { _states.Attack = value; }
     }
+    
     
     public Vector2 Movement
     {
@@ -26,18 +27,28 @@ public class CharacterInputHandler
         set { _states.Movement = value; }
     }
 
+    public Vector2 Hand
+    {
+        get => _states.Hand;
+        set => _states.Hand = value;
+    }
+
     //Must be called by whatever controller is using this input handler.
     public void Update()
     {
         Attack = _provider.Attack;
         Movement = _provider.Movement;
+        Hand = _provider.Hand;
+
     }
 }
 
 //Simple struct to store our input we have gotten from the provider.
 public struct InputStates
 {
-    public float Attack;
+    public bool Attack;
 
     public Vector2 Movement;
+
+    public Vector2 Hand;
 }

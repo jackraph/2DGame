@@ -8,7 +8,7 @@ using UnityEngine;
 /// TODO finish implementing new input system with with class.
 /// </summary>
 [Serializable]
-public class CHands
+public class CHand
 {
     private CController _cc;
     private CharacterInputHandler _input;
@@ -20,7 +20,20 @@ public class CHands
     [SerializeField] private GameObject handObject;
     [SerializeField] private GameObject[] holdableStuff;
     [SerializeField] private GameObject blockTool;
+    [SerializeField] private AudioClip soundSword;
+    private AudioSource _audio;
 
+    
+    //----------------ANIMATION
+    private string _currState;
+
+    private void ChangeAnimationState(string newState)
+    {
+        if (_currState == newState) return;
+        _anim.Play(newState);
+        _currState = newState;
+    }
+    //----------------END ANIMATION
     public void Initialize(CController cc, CharacterInputHandler input)
     {
         _cc = cc;
@@ -29,28 +42,20 @@ public class CHands
         _equipped = holdableStuff[0].GetComponent<IUsable>();
         _equippedBlockTool = blockTool.GetComponent<IUsable>();
         _currentEquipIndex = 0;
-    }
 
-    private bool active = false;
+    }
+    
     public void Update()
     {
-
-        if (_input.Attack > 0 && !active)
+        if (_input.Attack)
         {
-            //active = true;
             _equipped.OnUse();
             Debug.Log("Pressed!");
             // TODO
             //Determine which animation to play based on the category of weapon being held.
-            _anim.SetBool("Active", true);
-        }
-        else
-        {
-            _equipped.OffUse();
-            _anim.SetBool("Active", false);
+            _anim.SetTrigger("Swing");
         }
         
-
 
         //MouseWheel up/down check for weapon cycling
         if(Input.mouseScrollDelta.y > 0)
@@ -123,4 +128,5 @@ public class CHands
 
         _equippedBlockTool.OffUse();
     }
+    
 }

@@ -8,15 +8,19 @@ using Random = UnityEngine.Random;
 public class EnemyController : MonoBehaviour, IDamagable
 {
     private Animator _anim;
-    [SerializeField] private float health = 20;
     [SerializeField] private float touchDamage = 5;
 
     //Sub components.
     [SerializeField] private EnemyAI _ai = new EnemyAI();
 
+    private Rigidbody2D _rb;
+    private Health health;
+
     private void Awake()
     {
         //Initialize sub components.
+        health = GetComponent<Health>();
+        _rb = GetComponent<Rigidbody2D>();
         _ai.Initialize(this);
     }
 
@@ -36,16 +40,14 @@ public class EnemyController : MonoBehaviour, IDamagable
 
     public void TakeDamage(float amount)
     {
-        //Basic take damage function for testing.
-        health -= amount;
+        health.ChangeHealth(-amount);
 
-        Debug.Log("I took damage!");
-        
         //Remove the enemy from scene when dead
-        if(health <= 0)
+        if(health.GetCurrHealth() <= 0)
         {
             Destroy(this.gameObject);
         }
+        
     }
 
     public void OnCollisionEnter2D(Collision2D hit)

@@ -32,6 +32,9 @@ public class EnemyAI
     private EnemyController _ec;
     private Rigidbody2D _rb;
     
+    //Targetting
+    private GameObject _playerObj;
+    
     /// <summary>
     /// Serves the function of a constructor as we are unable to implement a real one since this class is serializable.
     /// </summary>
@@ -39,6 +42,7 @@ public class EnemyAI
     {
         _ec = ec;
         _rb = _ec.GetComponent<Rigidbody2D>();
+        _playerObj = GameObject.FindGameObjectWithTag("Player");
     }
     
     /// <summary>
@@ -47,6 +51,15 @@ public class EnemyAI
     /// </summary>
     public void Update()
     {
+        if (Vector2.Distance(_playerObj.transform.position, _rb.transform.position) < detectionRadius)
+        {
+            currentState = EnemyState.Attack;
+        }
+        else
+        {
+            currentState = EnemyState.Patrol;
+        }
+        
         if (currentState == EnemyState.Patrol)
         {
             Patrol();
@@ -88,7 +101,9 @@ public class EnemyAI
     private void Attack()
     {
         //Get direction to the player.
-        
+        Vector2 dir = _playerObj.transform.position - _rb.transform.position;
+        dir = dir.normalized;
         //Move in that direction.
+        _rb.velocity = dir * speed;
     }
 }

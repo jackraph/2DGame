@@ -4,18 +4,25 @@ using UnityEngine;
 
 public class CharacterInputProvider : MonoBehaviour
 {
-    private float _attack;
+    private bool _attack;
     private Vector2 _movement;
+    private Vector2 _hand;
     
-    public float Attack
+    public bool Attack
     {
-        get { return _attack;}
-        set { _attack = value; }
+        get => _attack;
+        set => _attack = value;
     }
-
+    
     public Vector2 Movement
     {
-        get { return _movement;}
-        set { _movement = value; }
+        get => _movement;
+        set => _movement = value;
+    }
+
+    public Vector2 Hand
+    {
+        get => _hand;
+        set => _hand = value;
     }
 }
