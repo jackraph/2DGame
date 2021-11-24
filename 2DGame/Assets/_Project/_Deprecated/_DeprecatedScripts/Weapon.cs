@@ -24,9 +24,14 @@ public abstract class Weapon : MonoBehaviour, IUsable, IModifiable
        
     }
 
+    public virtual UsableType GetUsableType()
+    {
+        return UsableType.RANGED;
+    }
+
     #region Modifier System
 
-    
+
     public virtual void Mod_Fire()
     {
         

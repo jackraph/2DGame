@@ -15,6 +15,14 @@ public class EnemyController : MonoBehaviour, IDamagable
 
     private Rigidbody2D _rb;
     private Health health;
+    private AudioSource source;
+
+    [SerializeField] private EnemyType enemyType;
+    private enum EnemyType
+    {
+        BLOB,
+        BAT
+    }
 
     private void Awake()
     {
@@ -22,6 +30,8 @@ public class EnemyController : MonoBehaviour, IDamagable
         health = GetComponent<Health>();
         _rb = GetComponent<Rigidbody2D>();
         _ai.Initialize(this);
+
+        source = GetComponent<AudioSource>();
     }
 
     private void Start()
@@ -29,7 +39,14 @@ public class EnemyController : MonoBehaviour, IDamagable
         //Randomly offset the idle animation of they arent synced if multiple enemies exist.
         _anim = GetComponent<Animator>();
         float randomOffset = Random.Range(0, _anim.GetCurrentAnimatorStateInfo(0).length);
-        _anim.Play("Blob-Squeeze", 0, randomOffset);
+
+        if (enemyType == EnemyType.BLOB)
+        {
+            _anim.Play("Blob-Squeeze", 0, randomOffset);
+        } else if (enemyType == EnemyType.BAT)
+        {
+            _anim.Play("FlapWings", 0, randomOffset);
+        }
     }
 
     private void FixedUpdate()
@@ -50,12 +67,21 @@ public class EnemyController : MonoBehaviour, IDamagable
         
     }
 
+
     public void OnCollisionEnter2D(Collision2D hit)
     {
         //Debug.Log(hit.collider.gameObject.name);
-        IDamagable damageComp = hit.collider.gameObject.GetComponent<IDamagable>();
-        damageComp?.TakeDamage(touchDamage);
+        IDamagable damagable = hit.collider.gameObject.GetComponent<IDamagable>();
+
+        if (damagable != null && hit.gameObject.tag == "Player")
+        {
+            damagable.TakeDamage(touchDamage);
+            Rigidbody2D hitRb = hit.gameObject.GetComponent<Rigidbody2D>();
+            hitRb.AddForceAtPosition((hit.gameObject.transform.position - transform.position) * (1200 * hitRb.mass), hit.gameObject.transform.position);
+            source.Play();
+        }
     }
+
 
     public void OnDrawGizmos()
     {

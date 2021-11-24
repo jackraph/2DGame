@@ -40,9 +40,13 @@ public class Melee : MonoBehaviour, IUsable, IModifiable
 
     private IEnumerator AnimCoroutine()
     {
-        Debug.Log("Coroutine worked.");
         yield return new WaitForSeconds(animLength);
         OffUse();
+    }
+
+    public UsableType GetUsableType()
+    {
+        return UsableType.MELEE;
     }
 
     public void Mod_Fire()

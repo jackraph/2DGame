@@ -57,6 +57,11 @@ public class TestWeapon : MonoBehaviour, IUsable
         throw new System.NotImplementedException();
     }
 
+    public UsableType GetUsableType()
+    {
+        return UsableType.MELEE;
+    }
+
     /// <summary>
     /// If collision occurs with an object that implements IDamagable interface call that interface to apply damage.
     /// This is so we don't have to do string checks for the tags of all damagable things in the game.

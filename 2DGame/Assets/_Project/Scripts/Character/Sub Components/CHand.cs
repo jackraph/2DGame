@@ -50,10 +50,13 @@ public class CHand
         if (_input.Attack)
         {
             _equipped.OnUse();
-            Debug.Log("Pressed!");
-            // TODO
+
+
             //Determine which animation to play based on the category of weapon being held.
-            _anim.SetTrigger("Swing");
+            if (_equipped.GetUsableType() == UsableType.MELEE)
+            {
+                _anim.SetTrigger("Swing");
+            }
         }
         
 

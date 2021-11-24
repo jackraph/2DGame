@@ -16,4 +16,9 @@ public class Ranged : MonoBehaviour, IUsable
     {
         
     }
+
+    public UsableType GetUsableType()
+    {
+        return UsableType.RANGED;
+    }
 }

@@ -13,21 +13,31 @@ public class Arrow : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         rb.velocity = transform.right * 20f;
-        Destroy(this.gameObject, 5f);
+        Destroy(this.gameObject, 35f);
     }
 
     private void OnTriggerEnter2D(Collider2D target)
     {
+
         IDamagable damagable = target.GetComponent<IDamagable>();
-        damagable?.TakeDamage(damage);
+        if (damagable != null)
+        {
+            //If strikes damagable object destroy arrow.
+            damagable.TakeDamage(damage);
+
+            //Play collision sound.
+            source.Play();
+
+            Destroy(this.gameObject, 0.1f);
+        }
+                
         
-        //Play collision sound.
-        //source.Play();
-        
-        //Show collision effect.
-        
-        //Destroy(this.gameObject);
+        //Freeze arrow.
         rb.velocity = Vector3.zero;
         rb.isKinematic = true;
+
+        //Play collision sound.
+        source.Play();
+
     }
 }

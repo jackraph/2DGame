@@ -13,6 +13,8 @@ public class CController : MonoBehaviour, IModifiable, IDamagable
     [SerializeField] private CBody body = new CBody();
     [SerializeField] private CMotor motor = new CMotor();
 
+    private HealthSystem health;
+
 
 
     private void Awake()
@@ -20,6 +22,7 @@ public class CController : MonoBehaviour, IModifiable, IDamagable
         //Initialize sub-components. Done instead of using constructor as these are serialized in the editor.
         body.Initialize(this, input);
         motor.Initialize(this, input);
+        health = GetComponent<HealthSystem>();
     }
 
     void Update()
@@ -48,6 +51,6 @@ public class CController : MonoBehaviour, IModifiable, IDamagable
 
     public void TakeDamage(float amount)
     {
-        
+        health.HealthChange(-amount);
     }
 }

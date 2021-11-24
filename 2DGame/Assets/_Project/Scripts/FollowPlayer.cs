@@ -4,19 +4,41 @@ using UnityEngine;
 
 public class FollowPlayer : MonoBehaviour
 {
-    public GameObject player; //Public variable to store a reference to the player game object
+    [SerializeField] private Transform target;
+    [SerializeField] private Vector2 bounds;
 
-    private Vector3 offset; // Private variable to store the offset distance between the player and camera
-
-    // Start is called before the first frame update
-    void Start()
+    private void LateUpdate()
     {
-        offset = transform.position - player.transform.position;
-    }
+        Vector3 movePos = Vector3.zero;
 
-    // Update is called once per frame
-    void LateUpdate()
-    {
-        transform.position = player.transform.position + offset;
+        float moveX = target.position.x - transform.position.x;
+        //If target is outside the cameras x bounding box.
+        if (moveX > bounds.x || moveX < -bounds.x)
+        {
+            if (transform.position.x < target.position.x)
+            {
+                movePos.x = moveX - bounds.x;
+            }
+            else
+            {
+                movePos.x = moveX + bounds.x;
+            }
+        }
+
+        float moveY = target.position.y - transform.position.y;
+        //If target is outside the cameras x bounding box.
+        if (moveY > bounds.y || moveY < -bounds.y)
+        {
+            if (transform.position.y < target.position.y)
+            {
+                movePos.y = moveY - bounds.y;
+            }
+            else
+            {
+                movePos.y = moveY + bounds.y;
+            }
+        }
+
+        transform.Translate(movePos);
     }
 }
