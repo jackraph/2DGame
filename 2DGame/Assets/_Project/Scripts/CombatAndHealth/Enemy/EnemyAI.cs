@@ -13,7 +13,7 @@ using UnityEngine;
 public class EnemyAI
 {
     //States.
-    private enum EnemyState { Patrol, Attack }
+    public enum EnemyState { Patrol, Attack }
     [SerializeField] private EnemyState currentState = EnemyState.Patrol;
     
     //Waypoints.
@@ -121,6 +121,8 @@ public class EnemyAI
         else if (dir.x < 0)
         {
             _ec.transform.localScale = new Vector3(-1, 1, 1);
-        }
+        }     
     }
+
+
 }
