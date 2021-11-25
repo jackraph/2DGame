@@ -21,6 +21,9 @@ public class Health : MonoBehaviour
         if(currentHealth > maxHealth)
         {
             currentHealth = maxHealth;
+        } else if (currentHealth < 0)
+        {
+            currentHealth = 0;
         }
         healthBar.fillAmount = currentHealth / maxHealth;
     }

@@ -15,7 +15,10 @@ public class EnemyController : MonoBehaviour, IDamagable
 
     private Rigidbody2D _rb;
     private Health health;
+
+    //Audio
     private AudioSource source;
+    [SerializeField] private AudioClip a_die;
 
     [SerializeField] private EnemyType enemyType;
     private enum EnemyType
@@ -62,7 +65,15 @@ public class EnemyController : MonoBehaviour, IDamagable
         //Remove the enemy from scene when dead
         if(health.GetCurrHealth() <= 0)
         {
-            Destroy(this.gameObject);
+            if (enemyType == EnemyType.BLOB)
+            {
+                _anim.SetTrigger("Die");
+            }
+            source.clip = a_die;
+            source.volume = 0.8f;
+            source.Play();
+
+            Destroy(this.gameObject, 0.3f);
         }
         
     }

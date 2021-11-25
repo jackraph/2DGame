@@ -29,7 +29,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7064504921742641038}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -77,7 +77,7 @@ SpriteRenderer:
   m_SortingLayerID: 469753713
   m_SortingLayer: 2
   m_SortingOrder: 1
-  m_Sprite: {fileID: 1309489925366895345, guid: ab905d6ad7cb32646b6f92a3a7215cd4, type: 3}
+  m_Sprite: {fileID: 6471186791388451097, guid: 30cd142c8d7d413409d71d48254a23f4, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -125,6 +125,7 @@ MonoBehaviour:
     waypoints: []
     speed: 2
     detectionRadius: 5
+  enemyType: 0
 --- !u!61 &7064504921742641037
 BoxCollider2D:
   m_ObjectHideFlags: 0
