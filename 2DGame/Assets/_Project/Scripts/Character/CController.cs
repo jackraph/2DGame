@@ -14,6 +14,7 @@ public class CController : MonoBehaviour, IModifiable, IDamagable
     [SerializeField] private CMotor motor = new CMotor();
 
     private HealthSystem health;
+    private Animator anim;
 
 
 
@@ -22,7 +23,9 @@ public class CController : MonoBehaviour, IModifiable, IDamagable
         //Initialize sub-components. Done instead of using constructor as these are serialized in the editor.
         body.Initialize(this, input);
         motor.Initialize(this, input);
+
         health = GetComponent<HealthSystem>();
+        anim = GetComponent<Animator>();
     }
 
     void Update()
@@ -31,6 +34,16 @@ public class CController : MonoBehaviour, IModifiable, IDamagable
         input.Update();
         body.Update();
 
+        if(Mathf.Abs(input.Movement.x) > 0)
+        {
+            anim.SetFloat("MovementAbsolute", Mathf.Abs(input.Movement.x));
+        } else if (Mathf.Abs(input.Movement.y) > 0)
+        {
+            anim.SetFloat("MovementAbsolute", Mathf.Abs(input.Movement.y));
+        } else
+        {
+            anim.SetFloat("MovementAbsolute", Mathf.Abs(0));
+        }
     }
 
     void FixedUpdate()
