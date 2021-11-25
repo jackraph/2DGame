@@ -13,6 +13,8 @@ public class Melee : MonoBehaviour, IUsable, IModifiable
 
     [SerializeField] private float animLength = 0;
 
+    private float swinging = 0;
+
     private void Start()
     {
         _collider = GetComponent<BoxCollider2D>();
@@ -23,18 +25,24 @@ public class Melee : MonoBehaviour, IUsable, IModifiable
     {
         _collider.enabled = true;
         StartCoroutine(AnimCoroutine());
+
     }
 
     public void OffUse()
     {
         _collider.enabled = false;
+        swinging = 0;
     }
     
     private void OnTriggerEnter2D(Collider2D target)
     {
+        swinging += 1;
         IDamagable damagable = target.GetComponent<IDamagable>();
         damagable?.TakeDamage(damage);
-        _audio.Play();
+        if (swinging < 2)
+        {        
+            _audio.Play();
+        }
         
     }
 

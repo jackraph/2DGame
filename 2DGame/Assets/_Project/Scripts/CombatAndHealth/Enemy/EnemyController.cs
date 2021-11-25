@@ -64,11 +64,10 @@ public class EnemyController : MonoBehaviour, IDamagable
 
         //Remove the enemy from scene when dead
         if(health.GetCurrHealth() <= 0)
-        {
-            if (enemyType == EnemyType.BLOB)
-            {
-                _anim.SetTrigger("Die");
-            }
+        {        
+            _anim.SetTrigger("Die");
+            
+            GetComponent<BoxCollider2D>().enabled = false;
             source.clip = a_die;
             source.volume = 0.8f;
             source.Play();

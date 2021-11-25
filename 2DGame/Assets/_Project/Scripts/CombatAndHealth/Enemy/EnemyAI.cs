@@ -87,6 +87,14 @@ public class EnemyAI
             {
                 currPointIndex++;
             }
+
+            if(dir.x > 0)
+            {
+                _ec.transform.localScale = Vector3.one;
+            } else if (dir.x < 0)
+            {
+                _ec.transform.localScale = new Vector3(-1, 1, 1);
+            }
         }
         else
         {
@@ -105,5 +113,14 @@ public class EnemyAI
         dir = dir.normalized;
         //Move in that direction.
         _rb.velocity = dir * speed;
+
+        if (dir.x > 0)
+        {
+            _ec.transform.localScale = Vector3.one;
+        }
+        else if (dir.x < 0)
+        {
+            _ec.transform.localScale = new Vector3(-1, 1, 1);
+        }
     }
 }
