@@ -34,13 +34,15 @@ public class CBody
          if (dirToHand.x > 0)
          {
              _cc.transform.localScale = Vector3.one;
+             //_cc.transform.localScale = Vector3.Lerp(_cc.transform.localScale, Vector3.one, Time.deltaTime * 15);
              arm.ChangeScale(Vector3.one);
          } 
          else if (dirToHand.x < 0)
          {
             
              _cc.transform.localScale = new Vector3(-1, 1, 1);
-             arm.ChangeScale(new Vector3(-1, -1, 1));
+            //_cc.transform.localScale = Vector3.Lerp(_cc.transform.localScale, new Vector3(-1, 1, 1), Time.deltaTime * 15);
+            arm.ChangeScale(new Vector3(-1, -1, 1));
          }
     }
 }

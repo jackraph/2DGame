@@ -13,8 +13,9 @@ public class CController : MonoBehaviour, IModifiable, IDamagable
     [SerializeField] private CBody body = new CBody();
     [SerializeField] private CMotor motor = new CMotor();
 
-    private HealthSystem health;
+    private Health health;
     private Animator anim;
+    private AudioSource audio;
 
 
 
@@ -24,8 +25,9 @@ public class CController : MonoBehaviour, IModifiable, IDamagable
         body.Initialize(this, input);
         motor.Initialize(this, input);
 
-        health = GetComponent<HealthSystem>();
+        health = GetComponent<Health>();
         anim = GetComponent<Animator>();
+        audio = GetComponent<AudioSource>();
     }
 
     void Update()
@@ -37,12 +39,15 @@ public class CController : MonoBehaviour, IModifiable, IDamagable
         if(Mathf.Abs(input.Movement.x) > 0)
         {
             anim.SetFloat("MovementAbsolute", Mathf.Abs(input.Movement.x));
+            audio.volume = 0.4f;
         } else if (Mathf.Abs(input.Movement.y) > 0)
         {
             anim.SetFloat("MovementAbsolute", Mathf.Abs(input.Movement.y));
+            audio.volume = 0.4f;
         } else
         {
-            anim.SetFloat("MovementAbsolute", Mathf.Abs(0));
+            anim.SetFloat("MovementAbsolute", 0);
+            audio.volume = 0;
         }
     }
 
@@ -64,6 +69,6 @@ public class CController : MonoBehaviour, IModifiable, IDamagable
 
     public void TakeDamage(float amount)
     {
-        health.HealthChange(-amount);
+        health.ChangeHealth(-amount);
     }
 }
