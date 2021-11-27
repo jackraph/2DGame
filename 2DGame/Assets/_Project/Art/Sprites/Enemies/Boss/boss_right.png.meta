@@ -1,9 +1,13 @@
 fileFormatVersion: 2
+<<<<<<< HEAD:2DGame/Assets/_Project/Art/Sprites/Enemies/Boss/boss_right.png.meta
 <<<<<<< HEAD:2DGame/Assets/_Project/Art/Sprites/Enemies_Scary_theme/png_files/bat.png.meta
 guid: fa66635f1404bf54ead04f0892bb5b7f
 =======
 guid: 8ef7540a34a6e634f80df779f24bc74a
 >>>>>>> 6e1792a6534dd31c59af2fba689f761c0435d363:2DGame/Assets/_Project/Art/Sprites/Enemies/Boss/boss_right.png.meta
+=======
+guid: 2246142b96d50414ab9e211fef461c8e
+>>>>>>> 6e1792a6534dd31c59af2fba689f761c0435d363:2DGame/Assets/_Project/Art/Sprites/Enemies/Pumpkin/pumpkin.png.meta
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
