@@ -9,10 +9,10 @@ TagManager:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Background
   - Water
   - UI
-  - 
+  - Top
   - 
   - 
   - 
@@ -39,11 +39,14 @@ TagManager:
   - 
   - 
   m_SortingLayers:
-  - name: Default
-    uniqueID: 0
-    locked: 0
   - name: Environment
     uniqueID: 3453817441
+    locked: 0
+  - name: Environment 2
+    uniqueID: 358519807
+    locked: 0
+  - name: Default
+    uniqueID: 0
     locked: 0
   - name: Enemies
     uniqueID: 469753713

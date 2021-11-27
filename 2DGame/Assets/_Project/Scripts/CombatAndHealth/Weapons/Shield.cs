@@ -44,12 +44,9 @@ public class Shield : MonoBehaviour, IUsable, IDamagable
             remainingTime -= Time.deltaTime;
             if(remainingTime <= 0)
             {
-                Debug.Log("Reset Colour");
                 isTiming = false;
 
                 _spriteRenderer.color = defaultColour;
-
-                
             }
         }
     }
@@ -64,9 +61,13 @@ public class Shield : MonoBehaviour, IUsable, IDamagable
 
     }
 
+    public UsableType GetUsableType()
+    {
+        return UsableType.SHIELD;
+    }
+
     public void TakeDamage(float damage)
     {
-        Debug.Log("Shield Hit");
 
         remainingTime = colourChangeTime;
         isTiming = true;

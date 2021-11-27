@@ -5,15 +5,20 @@ using UnityEngine;
 public class Ranged : MonoBehaviour, IUsable
 {
     [Tooltip("Attach the arrow prefab here.")]
-    [SerializeField] private GameObject arrowPrefab;
+    [SerializeField] private GameObject projectilePrefab;
 
     public  void OnUse()
     {
-        //Shoot an arrow at mouse position.
+        Instantiate(projectilePrefab, transform.position, transform.rotation);
     }
 
     public void OffUse()
     {
         
+    }
+
+    public UsableType GetUsableType()
+    {
+        return UsableType.RANGED;
     }
 }
