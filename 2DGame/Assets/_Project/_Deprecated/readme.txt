@@ -1,1 +1,0 @@
-Old scripts and assets from earlier prototypes. These will eventually be removed.
