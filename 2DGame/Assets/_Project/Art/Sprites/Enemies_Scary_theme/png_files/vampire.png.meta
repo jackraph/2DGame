@@ -1,9 +1,5 @@
 fileFormatVersion: 2
-<<<<<<< HEAD:2DGame/Assets/_Project/Art/Sprites/Enemies_Scary_theme/png_files/scarecrow.png.meta
-guid: f1ff1a8dc55a52c4687bad9e9f9bacf3
-=======
-guid: d82494f1fa7031347a36bc0b4896b1a9
->>>>>>> 6e1792a6534dd31c59af2fba689f761c0435d363:2DGame/Assets/_Project/Art/Sprites/Square.png.meta
+guid: 170cd36a0dfabb445b911a369cdc6fb2
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
