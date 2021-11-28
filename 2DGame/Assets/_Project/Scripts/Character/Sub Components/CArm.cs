@@ -48,4 +48,9 @@ public class CArm
         arm.transform.localScale = newScale;
        
     }
+
+    public float GetArmLength()
+    {
+        return armLength;
+    }
 }

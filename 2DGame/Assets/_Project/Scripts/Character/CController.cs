@@ -71,4 +71,10 @@ public class CController : MonoBehaviour, IModifiable, IDamagable
     {
         health.ChangeHealth(-amount);
     }
+
+    private void OnDrawGizmos()
+    {
+        Gizmos.color = Color.blue;
+        Gizmos.DrawLine(transform.position, Camera.main.ScreenToWorldPoint(Input.mousePosition));
+    }
 }
